@@ -217,12 +217,13 @@ footer{
 }
 .project-image{
     float:center;
+      
 
 }
 .work1photo{
 	
-	padding:5px;
-	display: block;
+   padding:5px;
+   display: block;
    margin-left: auto;
    margin-right: auto;
    width:90%;	
@@ -231,6 +232,7 @@ footer{
 }
 .project-info{
     position:center;
+   background-size: cover
    
 }
 .project-info h3{
