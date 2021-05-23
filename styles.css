@@ -245,5 +245,49 @@ footer{
 }
 
 
-@media only screen and (max-width: 992px){#lead{height:auto;min-height:auto;max-height:auto;padding:100px 15px}#lead-content{position:relative;transform:none;left:auto;top:auto}#lead-content h1{font-size:3em}#lead-content h2{font-size:1.75em}#about{text-align:center}#about p{text-align:left}}@media only screen and (max-width: 768px){header{position:fixed;display:none;z-index:999;animation:none;bottom:0;height:100%}#mobile-menu-open,#mobile-menu-close{display:block}#menu{height:100%;overflow-y:auto;box-shadow:none;border-radius:0;width:100%}#menu li{display:block;margin-bottom:10px}#lead-content h1{font-size:2em}#lead-content h2{font-size:1.3em}#lead-content a{padding:10px 20px}#lead-down{display:none}.education-block h3,.education-block span{float:none}.project-image{display:none}.project-info{position:relative;margin:0;padding:30px 15px;top:auto;transform:none}footer{text-align:center}.social{text-align:center}}@media only screen and (max-width: 480px){#lead-content h1{font-size:1.5em}#lead-content h2{font-size:1em}#lead-content a{font-size:0.9em;padding:5px 10px}}
+/* Portrait and Landscape */
+@media only screen and (max-width: 1024px) 
 
+   {/*iPad 1, 2, Mini and Air,background and border variable changes its color and properties*/ */
+	#lead-overlay{
+	
+        background-image: url("assets/DR.jpg")
+		
+	}
+    .project-image{
+        
+        width:100%
+    
+    }
+    .project-info{
+        position:center;
+       
+    }
+    
+	
+}
+
+
+@media screen and (max-width: 812px) 
+ {/* for iPhone X, background and border variable changes its color and properties*/
+	#lead-overlay {
+		background-image: url("assets/DR.jpg"); 
+		float: none;
+	
+        
+        
+    }
+    .project-image{
+        width:85%
+       
+       
+    
+    }
+    .project-info{
+        position:center;
+       
+    }
+    
+    
+	
+}
