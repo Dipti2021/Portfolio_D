@@ -1,0 +1,285 @@
+
+/*---CSS styling with comments---*/
+
+
+:root {
+
+	/* custom CSS variables are created and are accessible to all other CSS */
+	--light:lightpink;
+	--navlink-color: rgb(53, 52, 52);
+  }
+  
+*{
+	box-sizing: border-box;
+	padding: 1px;
+    margin: 0px;   /* it should be the same for all the codes*/
+}
+body { /*background protperties for the code*/
+	background: url("skulls.png");
+	background-repeat: repeat;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 16px;
+	color:black;
+	line-height: 35px;
+	text-align: justify;
+}
+
+.wrap {  /* the top portion of the code*/
+	
+	background:url("greyfloral.png");
+	margin-bottom: 0px;
+	border: 8px double var(--light);  /* used CSS var() function to reference a variable created above */
+	width: 100%;
+	margin: 0 auto;
+	clear: both;
+	overflow: hidden;
+	
+
+}
+
+#logo {  /*Name with a specific format*, Added some padding and styling for the logo */
+	float:left;
+	display: block;
+	background-color:gray;
+	color:var(--light);
+	font-family: "Georgia";
+	font-size: 30px;
+	padding: 0 50px;
+	line-height: 90px;
+	font-weight: bold;
+	text-decoration:none;
+	border-radius:15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+h1, h2 {  /* common entries for both the headers*/
+	font-family:"Cursive";
+	color: #aa904a;
+	padding-bottom: 20px;
+	font-weight: bold;
+
+}
+h1 { /*individual vales*/
+	font-size: 30px;
+	border-bottom: 2px solid palevioletred;
+}
+
+h2 { /*individual vales*/
+	font-size: 22px;
+	border-bottom: 1px solid palevioletred;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	
+}
+
+/*--properties of the nav bar--*/
+nav { 
+	float: right;
+
+}
+nav ul {
+	display: inline-flex; /* Turns this element into a flexbox */
+   /* Defines how to distribute the empty space between child elements */
+	justify-content: space-between;  /* space along the main axis determined by flex-direction */
+  min-width: 50px;
+}
+nav ul li { /*unordered list */
+	display: inline-block;
+	line-height: 50px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: var(--navlink-color); /* used CSS var() function to reference a variable created above */
+	margin-left: 20px;
+	line-height: 22px;
+	padding-left: 10px;
+	border-left: 1px solid #ddd;
+}
+nav a:hover {/* The user's cursor is positioned over the element */
+	color: rgb(189, 118, 129);
+}
+a:active { /* The user is actively pressing down on the element */
+	font-size: 150%;
+	box-shadow: 10px inset;
+}
+  
+
+/* class to put the contents of the class within the given range*/
+
+.photo {/* Added some padding and styling for the photos */
+	box-shadow: 5px 5px 5px #aaaaaa;
+	border-radius: 50px;
+	padding-bottom: 10px;
+  
+}
+  
+/*Main code*/
+main {
+	
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+  }
+/*  properties*/
+
+.AboutMe,.Connect, .MyWork {  /*properties that remain same for the three pages*/
+	background:url("regal.png");
+	padding: 30px;
+	border: 7px  dotted var(--light); /* use CSS var() function to reference a variable created above */
+	float:left;
+	justify-content: inherit; /* Inherits along the main axis determined by flex-direction */
+    word-wrap: break-word;
+	width: 100%;
+	border-radius: 25px;
+	margin-right: 70px;
+	
+}
+.AboutMe img{ /*setting DR's display image,Image Placeholders, Added some padding and styling for the photos */
+  padding:5px;
+	display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width:40%;	
+   height:40%;
+}
+
+.hw{
+	padding: 10px;
+	cursor: pointer;
+}
+
+
+/*Footer propeties which is displayed at the end of the webpage*/
+#footer{
+	text-align: center;
+	background: url("greyfloral.png");
+	color:rgb(53, 52, 52);
+	padding: 3px;
+	line-height: 60px;
+	margin-top: 50px;
+	border-top: 8px dotted var(--light); /* use CSS var() function to reference a variable created above */
+	font-size: 16px;
+
+}
+.Links { /*it has the links to github, linkedin and stackoverflow*/
+	
+	background:url("regal.png");
+
+	border: 3px dotted var(--light); /* use CSS var() function to reference a variable created above */
+	border-radius: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 5px;
+	line-height: 15px;
+
+
+}
+
+
+/*Portfolio*/
+
+.work1,.work2{/*similar properties of these two classes*/
+	box-shadow: 5px 5px 5px 5px #555353;
+	padding-bottom: 5px;
+}
+.work1:hover { /* The user's cursor is positioned over the element */
+	box-shadow: 0 0 2px 3px var(--light);
+}
+.work1{
+	display: flex; /* Turns this element into a flexbox */
+	/* Defines how to distribute the empty space between child elements */
+	justify-content: center;  /* Centers along the main axis determined by flex-direction */
+	border-radius: 50px;
+	width: 100%;
+    height: auto;
+	
+
+}
+.work2{
+	border-radius: 30px;	
+	padding: 5px;
+	
+	  
+}
+
+.work {
+	
+	width:30%;
+	
+}
+	 /* Turns this element into a flexbox */
+
+.work::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.work2:hover {/* The user's cursor is positioned over the element */
+	box-shadow: 0 0 2px 3px var(--light); /* used CSS var() function to reference a variable created above */
+}
+.content {
+	background: var(--light);  /* used CSS var() function to reference a variable created above */
+	color: #f1f1f1;
+	width: 80%;
+	padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.work1photo{
+	
+	padding:5px;
+	display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width:90%;	
+	
+   
+}
+
+/*Media query*/
+
+  
+/* Portrait and Landscape */
+@media only screen and (max-width: 1024px) 
+
+   {/*iPad 1, 2, Mini and Air,background and border variable changes its color and properties*/ */
+	.wrap{
+		width:80%;
+		
+	}
+	#AboutMe, #MyWork, #Connect{
+		background: #8e70a0a9;
+	 
+	}
+	.AboutMe,.Connect, .MyWork{
+		width: 80%;
+
+	}
+}
+
+
+@media screen and (max-width: 812px) 
+ {/* for iPhone X, background and border variable changes its color and properties*/
+	.wrap {
+		background: var(--light); /* used CSS var() function to reference a variable created above */
+		float: none;
+		width: 80%;
+		border: 5px dotted white;
+		border-radius: 5px;
+		
+	}
+	#AboutMe, #MyWork, #Connect{
+		background: #8bc0aea9;
+	   
+	}
+	.AboutMe,.Connect, .MyWork{
+		width: 100%;
+  
+	 }
+	
+}
