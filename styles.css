@@ -7,7 +7,7 @@
 body{
     background: url("assets/skulls.png");
 	background-repeat: repeat;
-    font-family:cursive;
+    font-family:sans-serif;
     font: size 16px;
 }
 body.active{
