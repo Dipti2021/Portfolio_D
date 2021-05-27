@@ -1,4 +1,4 @@
-:root {
+a:root {
 
 	/* custom CSS variables are created and are accessible to all other CSS */
 	--light:lightpink;
@@ -145,7 +145,7 @@ header.sticky{
 
 }
 div.fixed {
-    position: fixed;
+    position: relative;
     bottom: 0;
     right: 0;
     width: 400px;
