@@ -144,6 +144,13 @@ header.sticky{
     z-index:1
 
 }
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+   
+ }
 
 #about{
     padding:75px 15px;
