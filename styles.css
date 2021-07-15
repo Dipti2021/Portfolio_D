@@ -46,7 +46,7 @@
     background: url('https://media.giphy.com/media/3ohhwrfdoqBUw2DxJK/giphy.gif');/*url("https://media.giphy.com/media/ZuhhRTIUFF00U/giphy.gif");*/
     background-size: cover;
     object-fit: fill;
-    /*background-position: center top;*/
+    background-position: center top;
    
     
     height: 100vh;
