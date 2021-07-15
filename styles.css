@@ -1,321 +1,275 @@
-a:root {
-
-	/* custom CSS variables are created and are accessible to all other CSS */
-	--light:lightpink;
-	--navlink-color: rgb(53, 52, 52);
-}
-body{
-    background: url("assets/skulls.png");
-	background-repeat: repeat;
-    font-family:sans-serif;
-    font: size 16px;
-}
-body.active{
-    overflow:hidden;
-    z-index:-1
-}
-
-@keyframes dropHeader{0%{transform:translateY(-100%)}100%{transform:translateY(0)}}
-
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    text-align:center;
-    z-index:10;
-    animation-name:dropHeader;
-    animation-iteration-count:1;
-    animation-timing-function:ease;
-    animation-duration:0.75s
-}
-header ul{
-    display:inline-block;
-    background:rgb(253, 254, 255);
-    text-align:center;
-    padding:10px;
-    margin:0;
-    border-bottom-right-radius:15px;
-    border-bottom-left-radius:15px
-}
-header li{
-    display:inline-block
-
-}
-header a{
-    display:block;
-    color:#74372f;
-    padding:10px
-}
-header a:hover{
-    color:#7d21bb;
-    text-decoration:none;
-    background:#eee;
-    border-radius:4px
-}
-header a:focus{
-    color:#3498db;
-    text-decoration:none
-}
-header.active{
-    display:block
-}
-header.sticky{
-    position:fixed;
-    z-index:999
-}
-#menu.active{
-    display:block
-}
-#mobile-menu-open{
-    display:none;
-    cursor:pointer;
-    position:fixed;
-    right:15px;
-    top:10px;
-    color:#539489;
-    font-size:1.5em;
-    z-index:20;
-    padding:0 7px;
-    border-radius:4px;
-    background:#fff
-}
-#mobile-menu-close{
-    display:none;
-    text-align:right;
-    width:100%;
-    background:#fff;
-    font-size:1.5em;
-    padding-right:15px;
-    padding-top:10px;
-    cursor:pointer;
-    color:#539489;
-}
-#mobile-menu-close span{
-    font-size:0.5em;
-    text-transform:uppercase
-}
-#mobile-menu-close i{
-    vertical-align:middle
-}
-
-#lead{
-    position:relative;
-    height:100vh;
-    min-height:500px;
-    max-height:1080px;
+.f_page {
+    display: none;
+    background-color: rgb(49, 24, 24);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  #f_page_1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    background: white;
+  }
+  .f_page .nav-name {
+    color: white;
+    margin-left: 13vw; 
+  }
+  #nav-bar {
+    background-color: rgb(49, 24, 24);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  #nav-bar ul {
+    list-style: none;
+  }
+  #nav-bar li {
+    display: inline-block;
+    padding: 15px 40px 0px 40px;
+  }
+  li a {
+    color: white;
+  }
+  .center {
+    text-align: center;
+  }
+  .nav-name {
+    font-size: 25px;
+  }
+  #welcome {
+  
+    background: url('https://media.giphy.com/media/3ohhwrfdoqBUw2DxJK/giphy.gif');/*url("https://media.giphy.com/media/ZuhhRTIUFF00U/giphy.gif");*/
+    background-size: cover;
+    object-fit: fill;
+    /*background-position: center top;*/
+   
     
-    padding:15px;
-    overflow:hidden
-}
-#lead-content{
-    position:absolute;
-    z-index:10;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    text-align:center
-}
+    height: 100vh;
+    padding-top: 35vh;
+    text-align: center;
+    color:white;
+  }
 
-#lead-content h1{
-    color:rgb(8, 5, 5);
-    font-weight:900;
-    font-size:5em;
-    text-transform:uppercase;
-    letter-spacing:0.05em;
-    line-height:0.9em
-}
-#lead-content h2{
-    color:#332929;
-    font-weight:500;
-    font-size:1.5em;
-    margin-bottom:15px
-}
-#lead-overlay{
+  #about {
+    padding: 70px;
+    background: url("assets/regal.png");
+    background-size: contain;
+    color: white;
+  }
+  #profile {
+    display: inline-block;
+    margin-left: 20%;
+    vertical-align:top;
+  }
+  #profile img{
+    border-radius: 300px;
+    border: 5px dashed black;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .center{
+    color:black;
+  }
+  .about-text{
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: 100px;
+    margin-top: 30px;
+    width: 30%;
+    vertical-align:top;
+    color:black;
+    text-align: justify;
     
-    height:100%;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    opacity:0.3;
-    background-image: url("assets/DR.jpg");
-    background-repeat:  no-repeat;
-    z-index:1
-
-}
-div.fixed {
+  }
+  
+  #skills {
+    background:url('assets/skulls.png');
+    color: black;
+    padding: 70px 0px;
+    text-align: center;
+  }
+  .resume {
+    font-size: 24px;
+    font-weight: 100;
+  }
+  #skills i {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+  #skills-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+    
+  #frontend, #backend, #others{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100%  / 5);
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 3px;
+  }
+  .occuspace-link {
+    color: white;
+    text-decoration: underline;
+  }
+  #skills ul {
+    list-style: none;
+    text-align: left;
+  }
+  .icon {
+   
+    width: 22px;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    vertical-align: bottom;
+  }
+  #projects {
+    padding: 70px 0px;
+    color: white;
+    background: url("assets/regal.png")
+  }
+  .container-fluid {
+    width: 100%;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-fluid .box {
     position: relative;
-    bottom: 0;
-    right: 0;
-    width: 400px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container-fluid .box .imgBox {
+    position: relative;
+    overflow: hidden;
+    border: 4px dotted rgb(49, 24, 24);
+  }
+  .container-fluid .box .imgBox img {
+    width: 100%;
+    transition: transform 2s;
+    height: 100%;
+  }
+  .container-fluid .box .details {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(151, 86, 86, 0.8); 
+    transform: scaleY(0);
+    transition: transform .5s;
+    height: 38vh;
+  }
+  .container-fluid .box:hover .details {
+    transform: scaleY(1);
+    
+  }
+  .container-fluid .box .details .content{
    
- }
+    text-align: center;
+    padding-top: 15px;
+    color: #fff;
+  }
+  .content p {
+    margin: 0px;
+  }
+  .container-fluid .box .details h2 {
+    margin: 0;
+    padding: 0;
+  }
+  .imgBox {
 
-#about{
-    padding:75px 15px;
-    border-bottom:1px solid #dcd9d9
-}
-#about h2{
-    color:#0c0c0c
-}
-#about p{
-    color:#252729;
-    margin:0;
-    font-size:1.5em;
-
-}
-.project-image1 {
-    border-radius: 50%;
-    padding:5px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width:80%;
-}
-
-footer{
-    padding:50px 0
-}
-.copyright{
-    padding-top:20px
-}
-.copyright p{
-    margin:0;
-    color:#050e14
-}
-.btn:hover{
-    color:#3498db;
-    background:#fff;
-    text-decoration:none
-}
-.shadow{
-    box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24)
-}
-.shadow-large{
-    box-shadow:0 3px 6px rgba(0,0,0,0.08),0 3px 6px rgba(0,0,0,0.15)
-}
-.heading{
-    position:relative;
-    display:inline-block;
-    font-size:2em;
-    font-weight:300;
-    margin:0 0 30px 0
-}
-.heading:after{
-    position:absolute;
-    content:'';
-    top:100%;
-    height:1px;
-    width:50px;
-    left:0;
-    right:0;
-    margin:0 auto;
-    background:#1689d6
-}
-
-#projects{
-    padding:50px 15px;
-    
-    text-align:center
-}
-#projects h2{
-    color:#374054;
-    margin-bottom:50px
-}
-
-.project{
-    position:relative;
-    max-width:900px;
-    margin:0 auto 30px auto;
-    overflow:hidden;
-    border-radius:4px
-}
-.project-image{
-    float:center;
-      
-
-}
-.work1photo{
-	
-   padding:5px;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width:90%;	
-	
-   
-}
-.project-info{
-    position:center;
-   background-size: cover
-   
-}
-.project-info h3{
-    font-size:1.5em;
-    font-weight:300;
-    color:#374054;
-    margin:0 0 15px 0
-}
-
-#footer{
-	text-align: center;
-    
-	line-height: 60px;
-	margin-top: 50px;
-	border-top:3px dotted black; /* use CSS var() function to reference a variable created above */
-	
-
-}
-.hw{
-	padding: 10px;
-	cursor: pointer;
-}
-
-
-/* Portrait and Landscape */
-@media only screen and (max-width: 1024px) 
-
-   {/*iPad 1, 2, Mini and Air,background and border variable changes its color and properties*/ */
-	#lead-overlay{
-	
-        background-image: url("assets/DR.jpg")
-		
-	}
-    .project-image{
-        
-        width:100%
-    
+    height: 40vh;
+  }
+  .deployed {
+    margin: 10px;
+    background: rgb(139, 34, 83);
+    color: white;
+  }
+  .repo{
+    background: rgb(128, 41, 0);
+    color: white;
+  }
+  @media screen and (max-width: 780px) {
+  .f_page{
+    display: initial;
+  }
+  #nav-bar {
+    display: none;
+  }
+  .imgBox{
+    height: auto;
     }
-    .project-info{
-        position:center;
-       
+  .container-fluid .box {
+    width: 100%;
+    text-align: center;
     }
-    
-	
-}
-
-
-@media screen and (max-width: 812px) 
- {/* for iPhone X, background and border variable changes its color and properties*/
-	#lead-overlay {
-		background-image: url("assets/DR.jpg"); 
-		float: none;
-	
-        
-        
-    }
-    .project-image{
-        width:95%
-       
-       
-    
-    }
-    .project-info{
-        position:center;
-       
-    }
-    
-    
-	
-}
+  .box:hover {
+    height: auto;
+    width: auto;
+  }
+    .container-fluid .box .details {
+      height: auto;
+    }  
+  }
+  #contact {
+    background:url('assets/skulls.png');
+    color: black;
+    text-align: center;
+  }
+  #contact a {
+    color: black;
+  }
+  .footer {
+    margin: 0px 10px 40px 10px;
+    background-color: white
+  }
+  
+  
+  @media screen and (max-width: 640px) {
+    #profile img{
+    height: 200px;
+  }
+    .about-text{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 90%;
+  }
+    .project-container {
+    margin-left: 10%;
+  }
+    .nav-name {
+    font-size: 16px;
+  }
+    #nav-bar li {
+    padding: 10px 0px 0px 0px;
+    font-size: 12px;
+  }
+    #skills-table {
+    display: block;
+    justify-content: center;
+  }
+    #frontend, #backend, #teamplayer, #selfstarter {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container-fluid .box .imgBox img {
+    height: 250px;
+  }
+  }
